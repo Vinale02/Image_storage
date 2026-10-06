@@ -1,0 +1,201 @@
+.page-home {
+    background-color: #1E1E1E;
+    font-family: "Fira Sans", sans-serif;
+    width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+    border: none;
+}
+
+.other-page {
+    background-color: white;
+    font-family: "Fira Sans", sans-serif;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+    border: none;
+}
+
+.header-home {
+    font-size: 15px;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    color: white;
+}
+
+.header-upload {
+    font-size: 15px;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    color: black;
+}
+
+h1, p  {
+    padding: 0 20px 5px 20px;
+    margin: 0;
+}
+
+.header-button{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.header-button-btn {
+    position: absolute;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.header-button-btn:hover {
+    background-color: #0056b3;
+}
+
+.img {
+    width: 450px;
+    display: block;
+    margin: 0 auto;
+}
+
+.navigate {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.navigate-button {
+    padding: 10px 20px;
+    text-align: center;
+    background-color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #0046B7;
+    text-decoration: none;
+}
+
+.navigate-button:hover {
+    color: #70A6FF;
+}
+
+.main-page-link {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.upload-block {
+    text-align: center;
+    margin: 20px 20px;
+    padding-top: 40px;
+}
+
+.upload-form {
+    border: 2px dashed dodgerblue;
+    border-radius: 20px;
+    padding: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+
+}
+
+.drop-zone-img {
+    margin: 20px;
+}
+
+.drop-zone-message {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #2B2B2B;
+}
+
+.drop-zone-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #7A7A7A;
+}
+
+.submit-button {
+    margin-top: 20px;
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    gap: 10px;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+}
+
+.info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.name {
+    flex: 1;
+    width: 200px;
+    height: auto;
+    overflow-wrap: break-word;
+}
+
+.link {
+    flex: 1;
+    width: 200px;
+    height: auto;
+    overflow-wrap: break-word;
+}
+
+.size {
+    flex: 1;
+    width: 100px;
+    height: auto;
+    overflow-wrap: break-word;
+}
+
+.delete-button {
+    margin-left: auto;
+}
+
+.delete-button img{
+    width: 32px;
+    height: 32px;
+}
+
+.empty-message {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+}

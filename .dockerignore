@@ -1,0 +1,5 @@
+*.logs
+_old/
+images/
+logs/
+.venv/

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сервер картинок</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='styles/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body class="other-page">
+    <header>
+        <div class="header-upload">
+            <h1 class="header-title">Загрузить Изображения</h1>
+            <p class="header-text">Загружайте свои изображения и всегда имейте к ним доступ</p>
+        </div>
+        <div class="navigate">
+            <a href="/upload" class="navigate-button"><b>Загрузить</b></a>
+            <a href="/" class="navigate-button"><b>На главную</b></a>
+            <a href="/images" class="navigate-button"><b>Галерея</b></a>
+        </div>
+    </header>
+    <main class="main">
+        <div class="upload-block">
+            <form class="form" action="/upload" method="post" enctype="multipart/form-data">
+                <div class="upload-form">
+                    <div class="drop-zone">
+                        <img class="drop-zone-img" src="/static/image-uploader/img/icon/feather_upload-cloud.png" alt="drop-image">
+                        <p class="drop-zone-message">Выберите изображение для загрузки</p>
+                        <div class="drop-zone-description">
+                            <p>Поддерживаются только .jpg, .jpeg, .png, .gif</p>
+                            <p>Максимальный размер файла 10MB</p>
+                        </div>
+                    </div>
+                    <label for="file">Выберите изображение</label>
+                    <input type="file" name="file" accept=".jpg, .jpeg, .png, .gif">
+                </div>
+                <input class="submit-button" type="submit" value="Загрузить">
+            </form>
+        </div>
+    </main>
+</body>
+</html>
