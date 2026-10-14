@@ -171,6 +171,11 @@ async def upload(request: Request, file: UploadFile = File(...)):
         await connect_db(add_image, params, fetch=None)
     except Exception as e:
         logging.error(f'Ошибка записи метаданных в БД: {e}')
+
+        #при ошибке записи в БД удаляем файл с диска
+        if save_path.is_file():
+            save_path.unlink()
+            logging.info(f'Файл {save_path} удален с диска из-за ошибки записи в БД')
     else:
         logging.info(f'Метаданные файла {save_path} записаны в БД')
 
