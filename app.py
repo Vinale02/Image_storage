@@ -54,6 +54,13 @@ async def images(request: Request,
     except Exception as e:
         logging.error(f'Ошибка при обращении к БД: {e}')
 
+    #получаем базовый URL
+    base_url = str(request.base_url).rstrip("/")
+
+    #создаем полный URL для каждого изображения
+    for img in images_data_dict:
+        img["url"] = f"{base_url}/images/file/{img['filename']}"
+
     #определяем, есть ли страницы впереди и позади текущей
     has_next = len(images_data_dict) > limit
     has_prev = page > 1
