@@ -20,6 +20,3 @@ async def connect_db(sql_reqst: str,params: tuple, fetch: str):
                 return await cursor.fetchall()
 
             return None
-
-
-# asyncio.run(connect_db(sql_reqst, params, fetch=None))
