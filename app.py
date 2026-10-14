@@ -61,6 +61,16 @@ async def images(request: Request,
     for img in images_data_dict:
         img["url"] = f"{base_url}/images/file/{img['filename']}"
 
+        #конвертируем размер каждого изображения в Кб и Мб
+        if img['size'] > 1000000:
+            size = img['size'] / 1000000
+            img['size'] = f"{str(round(size, 1))} Мб"
+        elif img['size'] > 1000:
+            size = img['size'] / 1000
+            img['size'] = f"{str(round(size, 1))} Кб"
+        else:
+            img['size'] = f"{str(img['size'])} байт"
+
     #определяем, есть ли страницы впереди и позади текущей
     has_next = len(images_data_dict) > limit
     has_prev = page > 1
