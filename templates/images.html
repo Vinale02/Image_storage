@@ -45,8 +45,17 @@
                     </div>
                 </div>
             {% else %}
-                <p class="empty-message">Пусто. Для начала работы загрузите изображение.</p>
+                <p class="empty-message">Пусто.</p>
             {% endfor %}
+        </div>
+        <div class="pagination">
+            {% if has_prev %}
+                <a href="/images/?page={{ page - 1 }}" class="btn-back">Назад</a>
+            {%  endif %}
+            <span>{{ page }}</span>
+            {%  if has_next %}
+                <a href="/images/?page={{ page + 1}}" class="btn-next">Далее</a>
+            {% endif %}
         </div>
     </main>
 </body>

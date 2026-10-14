@@ -22,9 +22,11 @@ get_images_data = """
         original_name,
         size,
         upload_time,
-        file_type 
+        file_type
     FROM images
-    ORDER BY upload_time DESC;
+    ORDER BY upload_time DESC
+    LIMIT %s
+    OFFSET %s;
     """
 
 delete_image_data = """
